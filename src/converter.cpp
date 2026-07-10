@@ -20,11 +20,11 @@ double kilogramsToPounds(double kilograms) {
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
-    return (fahrenheit - 32.0) * 5.0 / 9.0; //achen: added spaces
+    return (fahrenheit - 32.0) /1.80; //achen: added spaces // jpitts changed 9/5 to 1.80 to clean up fractions
 }
 
 double celsiusToFahrenheit(double celsius) {
-    return (celsius * 9.0 / 5.0) + 32.0; //achen: added spaces
+    return (celsius * 1.80) + 32.0; //achen: added spaces // jpitts changed to 1.80
 }
 
 bool isValidMenuChoice(int choice) {
@@ -33,7 +33,7 @@ bool isValidMenuChoice(int choice) {
 }
 
 bool requiresNonNegativeValue(int choice) {
-    return (choice >= 1 && choice <= 4);
+    return (choice >= INCHES_TO_CENTIMETERS && choice <= KILOGRAMS_TO_POUNDS);
 }
 
 bool isValidValueForChoice(int choice, double value) {
